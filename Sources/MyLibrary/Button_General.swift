@@ -17,7 +17,7 @@ public class Button_General: UIButton {
     }
     
     var style: ButtonStyle?
-    let progressImage = UIImageView(image: UIImage(named: "WhiteProgress"))
+    public let progressImage = UIImageView(image: UIImage(named: "ProgressBar", in: Bundle.module, compatibleWith: nil))
     var buttonLabel = ""
     
     /**

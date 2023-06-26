@@ -19,7 +19,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "MyLibrary",
-            dependencies: ["SnapKit"]),
+            dependencies: ["SnapKit"],
+            resources: [.process("Resources")]),
         .testTarget(
             name: "MyLibraryTests",
             dependencies: ["MyLibrary"]),
