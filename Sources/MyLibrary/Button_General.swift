@@ -8,14 +8,13 @@
 import UIKit
 import SnapKit
 
-public class Button_General: UIButton {
-    
-    enum ButtonStyle {
-        case full
-        case outline
-        case none
-    }
-    
+enum ButtonStyle {
+    case full
+    case outline
+    case none
+}
+
+public class Button_General: UIButton {   
     var style: ButtonStyle?
     private let progressImage = UIImageView(image: UIImage(named: "WhiteProgress"))
     private var buttonLabel = ""
