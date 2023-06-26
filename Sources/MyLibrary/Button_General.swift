@@ -20,7 +20,7 @@ public class Button_General: UIButton {
     let progressImage = UIImageView(image: UIImage(named: "WhiteProgress"))
     var buttonLabel = ""
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(progressImage)
         progressImage.snp.makeConstraints { make in
@@ -30,7 +30,7 @@ public class Button_General: UIButton {
         progressImage.isHidden = true
     }
     
-    convenience init(style: ButtonStyle) {
+    public convenience init(style: ButtonStyle) {
         self.init(frame: .zero)
         self.style = style
     }
