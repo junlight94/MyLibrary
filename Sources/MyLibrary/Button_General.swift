@@ -30,7 +30,7 @@ public class Button_General: UIButton {
         progressImage.isHidden = true
     }
     
-    public convenience init(style: ButtonStyle) {
+    public convenience init(_ style: ButtonStyle) {
         self.init(frame: .zero)
         self.style = style
     }
