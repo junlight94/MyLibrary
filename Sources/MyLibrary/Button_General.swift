@@ -39,6 +39,15 @@ public class Button_General: UIButton {
     public convenience init(_ style: ButtonStyle) {
         self.init(frame: .zero)
         self.style = style
+        
+        guard let url = Bundle.main.url(forResource: "SpoqaHanSansNeo-Light", withExtension: "ttf"),
+              let fontDataProvider = CGDataProvider(url: url as CFURL),
+              let font = CGFont(fontDataProvider)
+                print(font)
+        else {
+            print("폰트 처리 실패")
+            return
+        }
     }
     
     required init?(coder: NSCoder) {
