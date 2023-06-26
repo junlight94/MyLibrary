@@ -8,13 +8,14 @@
 import UIKit
 import SnapKit
 
-enum ButtonStyle {
-    case full
-    case outline
-    case none
-}
-
-public class Button_General: UIButton {   
+public class Button_General: UIButton {
+    
+    enum ButtonStyle {
+        case full
+        case outline
+        case none
+    }
+    
     var style: ButtonStyle?
     private let progressImage = UIImageView(image: UIImage(named: "WhiteProgress"))
     private var buttonLabel = ""
@@ -29,7 +30,7 @@ public class Button_General: UIButton {
         progressImage.isHidden = true
     }
     
-    convenience init(_ style: ButtonStyle) {
+    convenience init(style: ButtonStyle) {
         self.init(frame: .zero)
         self.style = style
     }
