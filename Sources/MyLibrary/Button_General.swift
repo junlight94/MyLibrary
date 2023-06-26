@@ -20,6 +20,11 @@ public class Button_General: UIButton {
     let progressImage = UIImageView(image: UIImage(named: "WhiteProgress"))
     var buttonLabel = ""
     
+    /**
+     머터리얼 UI 버튼
+     - parameters:
+        - style: full, outline, none
+     */
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(progressImage)
@@ -30,11 +35,7 @@ public class Button_General: UIButton {
         progressImage.isHidden = true
     }
     
-    /**
-     머터리얼 UI 버튼
-     - parameters:
-        - style: full, outline, none
-     */
+    
     public convenience init(_ style: ButtonStyle) {
         self.init(frame: .zero)
         self.style = style
