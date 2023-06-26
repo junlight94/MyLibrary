@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class Button_General: UIButton {
+public class Button_General: UIButton {
     
     enum ButtonStyle {
         case full
