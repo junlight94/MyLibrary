@@ -10,15 +10,15 @@ import SnapKit
 
 public class Button_General: UIButton {
     
-    enum ButtonStyle {
+    public enum ButtonStyle {
         case full
         case outline
         case none
     }
     
     var style: ButtonStyle?
-    private let progressImage = UIImageView(image: UIImage(named: "WhiteProgress"))
-    private var buttonLabel = ""
+    let progressImage = UIImageView(image: UIImage(named: "WhiteProgress"))
+    var buttonLabel = ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)
