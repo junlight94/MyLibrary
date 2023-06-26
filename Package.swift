@@ -20,7 +20,8 @@ let package = Package(
         .target(
             name: "MyLibrary",
             dependencies: ["SnapKit"],
-            resources: [.process("Resources")]),
+            resources: [.process("Sources/Asset"),
+                        .process("Sources/Font")]),
         .testTarget(
             name: "MyLibraryTests",
             dependencies: ["MyLibrary"]),
