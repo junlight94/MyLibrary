@@ -17,7 +17,7 @@ public class Button_General: UIButton {
     }
     
     var style: ButtonStyle?
-    public let progressImage = UIImageView(image: UIImage(named: "ProgressBar", in: Bundle.main, compatibleWith: nil))
+    public let progressImage = UIImageView(image: UIImage(named: "ProgressBar", in: Bundle.module, compatibleWith: nil))
     var buttonLabel = ""
     
     /**
@@ -40,7 +40,7 @@ public class Button_General: UIButton {
         self.init(frame: .zero)
         self.style = style
         
-        guard let url = Bundle.main.url(forResource: "SpoqaHanSansNeo-Light", withExtension: "ttf"),
+        guard let url = Bundle.module.url(forResource: "SpoqaHanSansNeo-Light", withExtension: "ttf"),
               let fontDataProvider = CGDataProvider(url: url as CFURL),
               let font = CGFont(fontDataProvider)
         else {
