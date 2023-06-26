@@ -43,11 +43,11 @@ public class Button_General: UIButton {
         guard let url = Bundle.main.url(forResource: "SpoqaHanSansNeo-Light", withExtension: "ttf"),
               let fontDataProvider = CGDataProvider(url: url as CFURL),
               let font = CGFont(fontDataProvider)
-                print(font)
         else {
-            print("폰트 처리 실패")
+            // 폰트 로딩에 실패한 경우에 대한 처리
             return
         }
+        print(font)
     }
     
     required init?(coder: NSCoder) {
